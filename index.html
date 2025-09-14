@@ -93,6 +93,15 @@
             box-shadow: 0 0 0 3px rgba(171, 71, 188, 0.2);
         }
         
+        select.form-control {
+            cursor: pointer;
+            background-color: white;
+        }
+        
+        select.form-control option {
+            padding: 10px;
+        }
+        
         .btn-submit {
             background: linear-gradient(to right, #8e24aa, #d81b60);
             color: white;
@@ -213,7 +222,7 @@
                 <h3><i class="fas fa-info-circle"></i> Información del Evento</h3>
                 <p><i class="fas fa-calendar-alt"></i> <strong>Fecha:</strong> 24 de Septiembre de 2025</p>
                 <p><i class="fas fa-clock"></i> <strong>Horario:</strong> 8:00 AM - 4:00 PM</p>
-                <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Colegio Carlos Soublette, Municipio Chacao</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Colegio Carlos Soublette (Antigua Sede), Municipio Chacao</p>
             </div>
             
             <form action="https://formspree.io/f/xandqqnn" method="POST" id="inscription-form">
@@ -240,6 +249,23 @@
                 <div class="form-group">
                     <label for="residencia"><i class="fas fa-home"></i> Lugar de Residencia</label>
                     <input type="text" id="residencia" name="residencia" class="form-control" placeholder="Ej: Urbanización, sector, municipio" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="enteraste"><i class="fas fa-question-circle"></i> ¿Dónde te enteraste del Curso?</label>
+                    <select id="enteraste" name="enteraste" class="form-control" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Twitter">Twitter</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                        <option value="Amigo/Vecino">Amigo y/o Vecino</option>
+                        <option value="Página Web Municipal">Página Web Municipal</option>
+                        <option value="Cartelera/Volante">Cartelera/Volante</option>
+                        <option value="Radio">Radio</option>
+                        <option value="Televisión">Televisión</option>
+                        <option value="Otro">Otro</option>
+                    </select>
                 </div>
                 
                 <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Enviar Inscripción</button>
